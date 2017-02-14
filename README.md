@@ -1,5 +1,6 @@
 ## Welcome to Our Project Pages
 
+Author: Xiahe Liu, Chen Wang
 
 ### Introduction
 
@@ -12,6 +13,6 @@
 
 ### Final Project Presentations
 
-
-
->![Image](src)
+### Resource
+-[Paper 1, CVPR 2016](https://people.eecs.berkeley.edu/~jonlong/long_shelhamer_fcn.pdf)
+-[Paper 2, CVPR 2015](https://arxiv.org/pdf/1504.01013.pdf)
