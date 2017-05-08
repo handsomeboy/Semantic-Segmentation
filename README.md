@@ -15,6 +15,8 @@ We implemented an automatic advertising application based on the results of the 
 
 ![alt text](https://github.com/shynehua/Semantic-Segmentation/blob/master/fig/app.png)
 
+![alt text](/fig/app.png)
+
 Here is an overiew of our automatic advertising application, it contains four modules, UI, converlutional neural network (CNN), boundary finding and ads warp. Start from the UI, the user can upload the original image and ads, then UI will send the image to CNN and ads to ads warp module. With pre-trained model, CNN can do pixel-wise semantic segementation over the input image and the outout is a labeled image. The with the result of semantic segementation, the boundary finding module tries to find more accurate and regular area of TV/monitors if exists. The boundary finding module will output corner points of one of the largest target area to ads warp module. Finally, the advertisment will be transformed accoding to these corner points and is warpped to the target area of the origimal image.
 
 #### UI Design
