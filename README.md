@@ -47,10 +47,10 @@ Note that, the weighted masks are generated using the distance between the neare
 ![alt text](https://github.com/shynehua/Semantic-Segmentation/edit/master/fig/mask.png)
 
 The following figure is one of the examples.
-![alt text](https://github.com/shynehua/Semantic-Segmentation/edit/master/fig/output.jpg)
+![alt text](https://github.com/shynehua/Semantic-Segmentation/tree/master/files/output.jpg)
 
 #### Demo
-[Here is demo of our automatic advertising app](https://github.com/shynehua/Semantic-Segmentation/edit/master/files/demo2x.mp4)
+[Here is demo of our automatic advertising app](https://github.com/shynehua/Semantic-Segmentation/tree/master/files/demo2x.mp4)
 
 ### Other Resources
 
