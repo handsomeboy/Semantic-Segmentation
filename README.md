@@ -10,6 +10,7 @@ Our project is about exploring the topic of semantic segmentation. We investigat
 During CS 766 lectures, we have learned several traditional image segmentation methods, like K-means and mean-shift. Most of these methods are based on clustering algorithms. We use spatial and RGB information for each pixel and cluster pixels with similar characteristics into the same cluster. They could have good result in some situations, however, the major drawback of these traditional image segmentation is that the clustering algorithms don't know what each cluster represents. In other words, it loses the semantic information. Objects of the same class may be clustered to different clusters because of discrepancies in appearance or location.
 
 We implemented the traditional K-means and mean-shift algorithms in Matlab. Here are some of the results we got:
+
 ![alt text](/fig/kmeans.jpg)
 ![alt text](/fig/meanshift.jpg)
 
@@ -17,6 +18,7 @@ We implemented the traditional K-means and mean-shift algorithms in Matlab. Here
 Then what is semantic segmentation? How is it different from traditional image segmentation? Semantic segmentation is the task of clustering parts of images together which belong to the same object class. In other words, it is doing image classification for every pixel in the image.
 
 Here are some of the examples of semantic segmentation:
+
 ![alt text](/fig/exp1l.jpg)
 ![alt text](/fig/exp1r.jpg)
 
@@ -30,12 +32,15 @@ In this example, the desk part is yellow and all chairs are red.
 ### Fully Convolutional Neural Network
 
 ![alt text](/fig/fcn.png)
+
 Our project used fully convolutional neural (FCN) network to realize semantic segmentation. This neural network structure is proposed in [Fully convolutional networks for semantic segmentation](https://people.eecs.berkeley.edu/~jonlong/long_shelhamer_fcn.pdf). The input of FCN is an image of arbitrary size, with RGB information for each pixel. The output is an indexed image of the same size. Each pixel represents a class it is clustered to. Thus, it completes a Pixelwise end-to-end image classification.
 
 ![alt text](/fig/cnn.png)
+
 For traditional convolutional neural network which focus on image classification task, like AlexNet, GoogLeNet, VGG net, etc., the whole network stops after several fully connected layers following some convolutional layers. The last fully connected layer will output the score for each category and classify the image to be the category with the highest score.
 
  ![alt text](/fig/unet.png)
+
 This is one of the typical structures of FCN, which is from [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/pdf/1505.04597.pdf). There are two parts in this structure. The first part is the contracting path, which is actually from the traditional image classification convolutional neural network structure. It will downsample the image and extract the features during training. The other part is the expanding path, which is the reverse process of the first part, upsampling the dense features back into full size images. By first contracting and then expanding, we get an output which has the same size with the input image, with a label for each pixel in the image.
 
 ### Implementation and Experiments
@@ -47,11 +52,13 @@ We used deep learning framework [caffe](http://caffe.berkeleyvision.org/) to bui
 ![alt text](/fig/fcn8s4.jpg)
 ![alt text](/fig/fcn8s5.jpg)
 ![alt text](/fig/fcn8s6.jpg)
+
 Here is the structure we finally used for training. It is pretty complicated, with a series of convolutional, relu and pooling layers at first, followed by some fully connected layers and finally do some deconvolutional(upsampling) layers.
 
 As you could imagine, this huge network will take forever if we train it from scratch. Also, our data set is very limited to get good results. Thus, we decided to fine-tune it from VGG net. VGG net is a pre-trained image classification model from ImageNet dataset. We loaded weights from this model to our fully convolutional neural network, fine-tuning all layers by back-propagation through the whole net. Also, we combine coarse, high layer information with fine, low layer information to get more accurate results.
 
 Here are some results:
+
 ![alt text](/fig/result1l.jpg)
 ![alt text](/fig/result1r.jpg)
 ![alt text](/fig/result2l.jpg)
@@ -114,7 +121,7 @@ The following figure is one of the examples.
 ### Other Resources
 
 #### Project Proposal
-[Here is our project proposal](https://github.com/shynehua/Semantic-Segmentation/edit/master/files/proposal.pdf)
+[Here is our project proposal](/files/proposal.pdf)
 
 #### Final Project Presentations
 [Here is our slides for presetation](https://docs.google.com/presentation/d/1a2Luw1wK1LthmIWZab4sfcmiJ3vgsgiugX3XXOmfmAE/edit?usp=sharing)
