@@ -24,8 +24,8 @@ Here are some of the examples of semantic segmentation:
 
 In this example, all persons are labeled pink and all bicycles are green.
 
-![alt text](/fig/exp1l.jpg)
-![alt text](/fig/exp1r.jpg)
+![alt text](/fig/exp2l.jpg)
+![alt text](/fig/exp2r.jpg)
 
 In this example, the desk part is yellow and all chairs are red.
 
