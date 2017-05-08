@@ -122,6 +122,7 @@ The following figure is one of the examples.
 
 #### Project Proposal
 [Here is our project proposal](/files/proposal.pdf)
+[Here is our midterm report](/files/766-project-midterm.pdf)
 
 #### Final Project Presentations
 [Here is our slides for presetation](https://docs.google.com/presentation/d/1a2Luw1wK1LthmIWZab4sfcmiJ3vgsgiugX3XXOmfmAE/edit?usp=sharing)
